@@ -26,3 +26,12 @@ def test_senha_vazia_e_rejeitada():
     resultado = senha_valida(senha)
     # verificar
     assert resultado is False
+
+
+def test_senha_so_com_espacos_e_rejeitada():
+    # preparar
+    senha = " " * 16
+    # agir
+    resultado = senha_valida(senha)
+    # verificar
+    assert resultado is False
